@@ -1,0 +1,88 @@
+body {
+    background: #41BD59;
+  }
+  
+  .loader {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+    transform: rotate(90deg)
+  }
+  
+  .circle {
+    stroke-dashArray: 1666, 1650;
+    stroke-dashoffset: 2000;
+    
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    
+    animation-name: circle-loader;
+    animation-duration: 2s;
+    animation-delay: 0s;
+  }
+  
+  #purple {
+    animation-name: circle-loader-purple;
+  }
+  
+  #purple2 {
+    animation-name: circle-loader-purple;
+    animation-delay: 0.3s;
+  }
+  
+  #white {
+    animation-name: circle-loader-white;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes circle-loader-purple {
+    0% { 
+      stroke-dashArray: 1685, 1574;
+      stroke-dashoffset: 2000;
+    }
+    
+    35% {
+      stroke-dashOffset: 3310;
+    }
+    35.1% {
+      stroke-dashOffset: 3600;
+    }
+    
+    70% {
+      stroke-dashArray: 1574;
+      stroke-dashOffset: 4719;
+    }
+    
+    100% {
+      stroke-dashArray: 1574;
+      stroke-dashOffset: 4719;
+    }
+  }
+  
+  @keyframes circle-loader-white {
+    0% { 
+      stroke-dashArray: 1685, 1660;
+      stroke-dashoffset: 2010;
+    }
+    
+    50% {
+      stroke-dashOffset: 3310;
+    }
+    50.1% {
+      stroke-dashOffset: 3600;
+    }
+    
+    100% {
+      stroke-dashArray: 1574;
+      stroke-dashOffset: 4719;
+    }
+  }
